@@ -9,14 +9,14 @@
             $li.html($a);
 
             var depth = parseInt(this.tagName.substring(1));
-
+            console.log(this);
             if(depth > current) { // going down
 
                 $result.append($('<ol/>').append($li));
                 $result = $li;
 
             } else if (depth < current) { // going up
-                $result.parents('ol:eq(' +  (depth + current - 2) + ')').append($li);
+                $result.parents('ol:eq(' +  (depth - current - 1) + ')').append($li);
                 $result = $li;
 
             } else { // just add the dang item
