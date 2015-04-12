@@ -1,0 +1,24 @@
+ol{
+    padding: 0; margin: 0;
+    list-style-type: none;
+}
+
+li:before{
+    content: '> ';
+    color: #ccc;
+}
+
+ol ol{padding: 0 0 0 2rem;}
+
+ol ol ol{
+    display: none;
+}
+
+ol ol li:hover ol{
+    display: block;
+    color: #ff0000;
+}
+
+a:target{
+    animation: highlight 1s ease;
+}
